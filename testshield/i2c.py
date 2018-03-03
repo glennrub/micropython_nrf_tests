@@ -3,7 +3,8 @@ from machine import I2C, Pin
 
 mch = os.uname().machine
 if 'PCA10028' in mch:
-    pass
+    scl = Pin.board.PA28
+    sda = Pin.board.PA25
 elif 'PCA10040' in mch:
     scl = Pin.board.PA24
     sda = Pin.board.PA23

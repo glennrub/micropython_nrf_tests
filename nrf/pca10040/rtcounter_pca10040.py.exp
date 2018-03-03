@@ -1,0 +1,11 @@
+RTCounter(0)
+RTCounter(1)
+RTCounter(2)
+ValueError
+ValueError
+RTCounter(1)
+True
+RTCounter(1)
+RTCounter(1)
+True
+RTCounter(1)

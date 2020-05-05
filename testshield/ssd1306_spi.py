@@ -4,8 +4,12 @@ from ssd1306 import SSD1306_SPI
 
 mch = os.uname().machine
 if 'PCA10028' in mch:
-    scl = Pin.board.P15
-    sda = Pin.board.P14
+    sck = Pin.board.P29
+    miso = Pin.board.P28
+    mosi = Pin.board.P25
+    cs = Pin.board.P2
+    dc = Pin.board.P3
+    res = Pin.board.P4
 elif 'PCA10040' in mch:
     sck = Pin.board.P25
     miso = Pin.board.P24
@@ -30,7 +34,7 @@ elif 'PCA10090' in mch:
 else:
     raise Exception('Board not supported!')
 
-spi = SPI(0, sck=sck, mosi=mosi, miso=miso)
+spi = SPI(1, sck=sck, mosi=mosi, miso=miso)
 print(spi)
 disp_spi = SSD1306_SPI(128, 64, spi, dc, res, cs)
 disp_spi.fill(0)

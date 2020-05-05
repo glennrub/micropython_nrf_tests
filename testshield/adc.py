@@ -3,14 +3,20 @@ from machine import ADC
 
 mch = os.uname().machine
 if 'PCA10028' in mch:
-    pass
+    vdd = 2809 # 2.809v
+    adc_num = 2
+    min_voltage = 1380 # 1.38v
+    max_voltage = 1420 # 1.42v
 elif 'PCA10040' in mch:
     vdd = 2833 # 2.833v
     adc_num = 1 # P0.03
     min_voltage = 1380 # 1.38v
     max_voltage = 1420 # 1.42v
 elif 'PCA10056' in mch:
-    pass
+    vdd = 2972
+    adc_num = 1
+    min_voltage = 1440
+    max_voltage = 1500
 elif 'PCA10090' in mch:
     pass
 else:

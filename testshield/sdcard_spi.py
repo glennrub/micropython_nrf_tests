@@ -4,14 +4,14 @@ from sdcard import SDCard
 
 mch = os.uname().machine
 if 'PCA10028' in mch:
-    sck = Pin.board.P4
-    mosi = Pin.board.P5
-    miso = Pin.board.P6
-    cs = Pin.board.P14
+    sck = Pin.board.P29
+    miso = Pin.board.P28
+    mosi = Pin.board.P25
+    cs = Pin.board.P16
 elif 'PCA10040' in mch:
     sck = Pin.board.P25
-    mosi = Pin.board.P23
     miso = Pin.board.P24
+    mosi = Pin.board.P23
     cs = Pin.board.P15
 elif 'PCA10056' in mch:
     sck = Pin.board.P47

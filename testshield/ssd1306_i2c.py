@@ -4,8 +4,8 @@ from ssd1306_mod import SSD1306_I2C_Mod
 
 mch = os.uname().machine
 if 'PCA10028' in mch:
-    scl = Pin.board.P1
-    sda = Pin.board.P2
+    scl = Pin.board.P5
+    sda = Pin.board.P6
 elif 'PCA10040' in mch:
     scl = Pin.board.P30
     sda = Pin.board.P31
